@@ -11,7 +11,7 @@
         "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
         "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples",
-        "allure-report": "npx allure generate --clean && allure open"
+        "allure-report": "npx allure generate ./output/allure-results --clean -o allure-report && allure open allure-report"
     },
     "author": "Saurabh Masand",
     "license": "ISC",
