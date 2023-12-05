@@ -25,6 +25,4 @@ jobs:
     - name: Install Playwright dependencies
       run: npm install codeceptjs playwright --save-dev
     - name: Run Codecept tests
-      run: npm run codeceptjs
-    - name: Generate report
-      run: npm run allure-report
+      run: codeceptjs:headless
