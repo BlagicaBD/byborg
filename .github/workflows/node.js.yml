@@ -1,13 +1,8 @@
 name: "tests"
 on:
-  pull_request:
   push:
     branches:
-      - main
-      - 'releases/*'
-  workflow_dispatch:
-  schedule:
-    - cron: '40 0 * * *'
+      - master
 
 jobs:
   test-linux:
