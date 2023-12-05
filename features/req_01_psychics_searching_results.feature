@@ -2,7 +2,7 @@ Feature: Psychics Searching Results
 	In order to search psychics by a partial name
 	As a guest user
 	I should able to view results that partially matches the searching filter
-
+    @getSearchTerm
 	Scenario Outline: Searching results match with Name and number on search dropdown
 		Given I navigate to Oranum web application home page
 		When I type "<searchTerm>" in the search
