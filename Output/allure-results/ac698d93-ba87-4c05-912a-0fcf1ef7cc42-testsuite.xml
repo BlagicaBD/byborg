@@ -1,0 +1,808 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1701807916294' stop='1701807951905'>
+    <name>Psychics Searching Results</name>
+    <title>Psychics Searching Results</title>
+    <test-cases>
+        <test-case start='1701807916986' status='passed' stop='1701807923311'>
+            <name>Searching results match with Name and number on search dropdown {"searchTerm":"Matt"}</name>
+            <title>Searching results match with Name and number on search dropdown {"searchTerm":"Matt"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807917518' status='passed' stop='1701807919869'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807917518' status='passed' stop='1701807919869'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807917518' status='passed' stop='1701807919852'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807919852' status='passed' stop='1701807919858'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807919862' status='passed' stop='1701807919868'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807919869' status='passed' stop='1701807923283'>
+                    <name>When I type "Matt" in the search ""</name>
+                    <title>When I type "Matt" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807919869' status='passed' stop='1701807923283'>
+                            <name>On homePage: type in search "Matt"</name>
+                            <title>On homePage: type in search "Matt"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807919869' status='passed' stop='1701807919872'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807919872' status='passed' stop='1701807921282'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "Matt"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "Matt"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807921282' status='passed' stop='1701807923283'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807923283' status='passed' stop='1701807923311'>
+                    <name>Then only matching names are displayed in search dropdown ""</name>
+                    <title>Then only matching names are displayed in search dropdown ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807923284' status='passed' stop='1701807923311'>
+                            <name>On homePage: match name </name>
+                            <title>On homePage: match name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807923285' status='passed' stop='1701807923308'>
+                                    <name>I grab text from all "ul.toolbar-autosuggest>li"</name>
+                                    <title>I grab text from all "ul.toolbar-autosuggest>li"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807923310' status='passed' stop='1701807923310'>
+                                    <name>I assert match regex "MattWarren
+                                    •", /Matt/i</name>
+                                    <title>I assert match regex "MattWarren
+                                    •", /Matt/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807923311' status='passed' stop='1701807923311'>
+                                    <name>I assert match regex "MatthiasWan
+                                    •", /Matt/i</name>
+                                    <title>I assert match regex "MatthiasWan
+                                    •", /Matt/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807923311' status='passed' stop='1701807923311'>
+                                    <name>I assert match regex "MommaMatt
+                                    •", /Matt/i</name>
+                                    <title>I assert match regex "MommaMatt
+                                    •", /Matt/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807923311' status='passed' stop='1701807923311'>
+                                    <name>I assert match regex "Show all results for Matt", /Matt/i</name>
+                                    <title>I assert match regex "Show all results for Matt", /Matt/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701807923379' status='passed' stop='1701807928408'>
+            <name>Searching results match with Name and number on search dropdown {"searchTerm":"Myst"}</name>
+            <title>Searching results match with Name and number on search dropdown {"searchTerm":"Myst"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807923463' status='passed' stop='1701807925237'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807923463' status='passed' stop='1701807925237'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807923463' status='passed' stop='1701807925224'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807925224' status='passed' stop='1701807925229'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807925232' status='passed' stop='1701807925237'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807925237' status='passed' stop='1701807928387'>
+                    <name>When I type "Myst" in the search ""</name>
+                    <title>When I type "Myst" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807925237' status='passed' stop='1701807928387'>
+                            <name>On homePage: type in search "Myst"</name>
+                            <title>On homePage: type in search "Myst"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807925237' status='passed' stop='1701807925240'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807925240' status='passed' stop='1701807926386'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "Myst"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "Myst"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807926386' status='passed' stop='1701807928387'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807928387' status='passed' stop='1701807928408'>
+                    <name>Then only matching names are displayed in search dropdown ""</name>
+                    <title>Then only matching names are displayed in search dropdown ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807928387' status='passed' stop='1701807928408'>
+                            <name>On homePage: match name </name>
+                            <title>On homePage: match name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807928387' status='passed' stop='1701807928407'>
+                                    <name>I grab text from all "ul.toolbar-autosuggest>li"</name>
+                                    <title>I grab text from all "ul.toolbar-autosuggest>li"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928407' status='passed' stop='1701807928407'>
+                                    <name>I assert match regex "SunflowerMystic
+                                    •", /Myst/i</name>
+                                    <title>I assert match regex "SunflowerMystic
+                                    •", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928407' status='passed' stop='1701807928407'>
+                                    <name>I assert match regex "MysticRumaiza
+                                    •", /Myst/i</name>
+                                    <title>I assert match regex "MysticRumaiza
+                                    •", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928407' status='passed' stop='1701807928408'>
+                                    <name>I assert match regex "MysticMilena
+                                    •", /Myst/i</name>
+                                    <title>I assert match regex "MysticMilena
+                                    •", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928408' status='passed' stop='1701807928408'>
+                                    <name>I assert match regex "MYSTIQUEEMAGIC
+                                    •", /Myst/i</name>
+                                    <title>I assert match regex "MYSTIQUEEMAGIC
+                                    •", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928408' status='passed' stop='1701807928408'>
+                                    <name>I assert match regex "FAITHMYSTICS
+                                    •", /Myst/i</name>
+                                    <title>I assert match regex "FAITHMYSTICS
+                                    •", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807928408' status='passed' stop='1701807928408'>
+                                    <name>I assert match regex "Show all results for Myst", /Myst/i</name>
+                                    <title>I assert match regex "Show all results for Myst", /Myst/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701807928448' status='passed' stop='1701807933676'>
+            <name>Searching results match with Name and number on search dropdown {"searchTerm":"Ann"}</name>
+            <title>Searching results match with Name and number on search dropdown {"searchTerm":"Ann"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807928730' status='passed' stop='1701807930505'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807928730' status='passed' stop='1701807930504'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807928730' status='passed' stop='1701807930491'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807930491' status='passed' stop='1701807930496'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807930498' status='passed' stop='1701807930504'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807930505' status='passed' stop='1701807933636'>
+                    <name>When I type "Ann" in the search ""</name>
+                    <title>When I type "Ann" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807930505' status='passed' stop='1701807933636'>
+                            <name>On homePage: type in search "Ann"</name>
+                            <title>On homePage: type in search "Ann"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807930505' status='passed' stop='1701807930509'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807930509' status='passed' stop='1701807931633'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "Ann"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "Ann"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807931633' status='passed' stop='1701807933636'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807933636' status='passed' stop='1701807933676'>
+                    <name>Then only matching names are displayed in search dropdown ""</name>
+                    <title>Then only matching names are displayed in search dropdown ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807933637' status='passed' stop='1701807933676'>
+                            <name>On homePage: match name </name>
+                            <title>On homePage: match name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807933637' status='passed' stop='1701807933675'>
+                                    <name>I grab text from all "ul.toolbar-autosuggest>li"</name>
+                                    <title>I grab text from all "ul.toolbar-autosuggest>li"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933675' status='passed' stop='1701807933675'>
+                                    <name>I assert match regex "OpenChannel
+                                    •", /Ann/i</name>
+                                    <title>I assert match regex "OpenChannel
+                                    •", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933676' status='passed' stop='1701807933676'>
+                                    <name>I assert match regex "AnnaSimone
+                                    •", /Ann/i</name>
+                                    <title>I assert match regex "AnnaSimone
+                                    •", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933676' status='passed' stop='1701807933676'>
+                                    <name>I assert match regex "AnnieChevelle
+                                    •", /Ann/i</name>
+                                    <title>I assert match regex "AnnieChevelle
+                                    •", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933676' status='passed' stop='1701807933676'>
+                                    <name>I assert match regex "PsychicAnnLucas
+                                    •", /Ann/i</name>
+                                    <title>I assert match regex "PsychicAnnLucas
+                                    •", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933676' status='passed' stop='1701807933676'>
+                                    <name>I assert match regex "MissBreanneDream
+                                    •", /Ann/i</name>
+                                    <title>I assert match regex "MissBreanneDream
+                                    •", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807933676' status='passed' stop='1701807933676'>
+                                    <name>I assert match regex "Show all results for Ann", /Ann/i</name>
+                                    <title>I assert match regex "Show all results for Ann", /Ann/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701807933714' status='passed' stop='1701807938750'>
+            <name>Searching results match with Name and number on search dropdown {"searchTerm":"psy"}</name>
+            <title>Searching results match with Name and number on search dropdown {"searchTerm":"psy"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807933854' status='passed' stop='1701807935578'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807933854' status='passed' stop='1701807935578'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807933854' status='passed' stop='1701807935567'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807935567' status='passed' stop='1701807935572'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807935574' status='passed' stop='1701807935578'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807935578' status='passed' stop='1701807938714'>
+                    <name>When I type "psy" in the search ""</name>
+                    <title>When I type "psy" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807935578' status='passed' stop='1701807938714'>
+                            <name>On homePage: type in search "psy"</name>
+                            <title>On homePage: type in search "psy"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807935578' status='passed' stop='1701807935580'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807935580' status='passed' stop='1701807936713'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "psy"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "psy"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807936713' status='passed' stop='1701807938714'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807938714' status='passed' stop='1701807938750'>
+                    <name>Then only matching names are displayed in search dropdown ""</name>
+                    <title>Then only matching names are displayed in search dropdown ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807938714' status='passed' stop='1701807938750'>
+                            <name>On homePage: match name </name>
+                            <title>On homePage: match name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807938714' status='passed' stop='1701807938748'>
+                                    <name>I grab text from all "ul.toolbar-autosuggest>li"</name>
+                                    <title>I grab text from all "ul.toolbar-autosuggest>li"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938749' status='passed' stop='1701807938749'>
+                                    <name>I assert match regex "PsychicZainz
+                                    •", /psy/i</name>
+                                    <title>I assert match regex "PsychicZainz
+                                    •", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938749' status='passed' stop='1701807938749'>
+                                    <name>I assert match regex "PsychicJohn
+                                    •", /psy/i</name>
+                                    <title>I assert match regex "PsychicJohn
+                                    •", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938749' status='passed' stop='1701807938749'>
+                                    <name>I assert match regex "Psychickay
+                                    •", /psy/i</name>
+                                    <title>I assert match regex "Psychickay
+                                    •", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938750' status='passed' stop='1701807938750'>
+                                    <name>I assert match regex "PsychicRider
+                                    •", /psy/i</name>
+                                    <title>I assert match regex "PsychicRider
+                                    •", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938750' status='passed' stop='1701807938750'>
+                                    <name>I assert match regex "CarolinePsychic
+                                    •", /psy/i</name>
+                                    <title>I assert match regex "CarolinePsychic
+                                    •", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807938750' status='passed' stop='1701807938750'>
+                                    <name>I assert match regex "Show all results for psy", /psy/i</name>
+                                    <title>I assert match regex "Show all results for psy", /psy/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701807938780' status='passed' stop='1701807943963'>
+            <name>Searching results match with Name and number on search dropdown {"searchTerm":"123"}</name>
+            <title>Searching results match with Name and number on search dropdown {"searchTerm":"123"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807939062' status='passed' stop='1701807940810'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807939062' status='passed' stop='1701807940810'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807939062' status='passed' stop='1701807940798'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807940798' status='passed' stop='1701807940803'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807940805' status='passed' stop='1701807940810'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807940810' status='passed' stop='1701807943947'>
+                    <name>When I type "123" in the search ""</name>
+                    <title>When I type "123" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807940810' status='passed' stop='1701807943947'>
+                            <name>On homePage: type in search "123"</name>
+                            <title>On homePage: type in search "123"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807940810' status='passed' stop='1701807940815'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807940815' status='passed' stop='1701807941946'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "123"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "123"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807941946' status='passed' stop='1701807943947'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807943947' status='passed' stop='1701807943963'>
+                    <name>Then only matching names are displayed in search dropdown ""</name>
+                    <title>Then only matching names are displayed in search dropdown ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807943947' status='passed' stop='1701807943963'>
+                            <name>On homePage: match name </name>
+                            <title>On homePage: match name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807943947' status='passed' stop='1701807943963'>
+                                    <name>I grab text from all "ul.toolbar-autosuggest>li"</name>
+                                    <title>I grab text from all "ul.toolbar-autosuggest>li"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807943963' status='passed' stop='1701807943963'>
+                                    <name>I assert match regex "Heera123
+                                    •", /123/i</name>
+                                    <title>I assert match regex "Heera123
+                                    •", /123/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807943963' status='passed' stop='1701807943963'>
+                                    <name>I assert match regex "Angelika123
+                                    •", /123/i</name>
+                                    <title>I assert match regex "Angelika123
+                                    •", /123/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807943963' status='passed' stop='1701807943963'>
+                                    <name>I assert match regex "Joanna123
+                                    •", /123/i</name>
+                                    <title>I assert match regex "Joanna123
+                                    •", /123/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807943963' status='passed' stop='1701807943963'>
+                                    <name>I assert match regex "Show all results for 123", /123/i</name>
+                                    <title>I assert match regex "Show all results for 123", /123/i</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701807943988' status='passed' stop='1701807951884'>
+            <name>Clicking on show all result 'name' from dropdown should show list with same name. {"name":"Ann"} @getSearchListforuser</name>
+            <title>Clicking on show all result 'name' from dropdown should show list with same name. {"name":"Ann"} @getSearchListforuser</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@getSearchListforuser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701807944249' status='passed' stop='1701807945969'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807944249' status='passed' stop='1701807945969'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807944249' status='passed' stop='1701807945958'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807945958' status='passed' stop='1701807945962'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807945965' status='passed' stop='1701807945969'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807945969' status='passed' stop='1701807949121'>
+                    <name>When I type "Ann" in the search ""</name>
+                    <title>When I type "Ann" in the search ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807945969' status='passed' stop='1701807949121'>
+                            <name>On homePage: type in search "Ann"</name>
+                            <title>On homePage: type in search "Ann"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807945969' status='passed' stop='1701807945972'>
+                                    <name>I see element "input[placeholder="Search for Expert or category"]"</name>
+                                    <title>I see element "input[placeholder="Search for Expert or category"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807945972' status='passed' stop='1701807947120'>
+                                    <name>I fill field "input[placeholder="Search for Expert or category"]", "Ann"</name>
+                                    <title>I fill field "input[placeholder="Search for Expert or category"]", "Ann"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807947120' status='passed' stop='1701807949121'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807949121' status='passed' stop='1701807951134'>
+                    <name>Then user click on show all result with name ""</name>
+                    <title>Then user click on show all result with name ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807949121' status='passed' stop='1701807951134'>
+                            <name>On homePage: click on search result </name>
+                            <title>On homePage: click on search result </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807949121' status='passed' stop='1701807951132'>
+                                    <name>I click "ul.toolbar-autosuggest>li:last-of-type"</name>
+                                    <title>I click "ul.toolbar-autosuggest>li:last-of-type"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701807951134' status='passed' stop='1701807951884'>
+                    <name>Then all result contains "Ann" in the search list displayed ""</name>
+                    <title>Then all result contains "Ann" in the search list displayed ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701807951134' status='passed' stop='1701807951884'>
+                            <name>On homePage: count and validate performer name elements "Ann"</name>
+                            <title>On homePage: count and validate performer name elements "Ann"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701807951134' status='passed' stop='1701807951377'>
+                                    <name>I see element "h1.listpage-title", 5</name>
+                                    <title>I see element "h1.listpage-title", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701807951377' status='passed' stop='1701807951882'>
+                                    <name>I grab text from all "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div"</name>
+                                    <title>I grab text from all "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,499 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1701804223032' stop='1701804242588'>
+    <name>Navigate to a Psychic's Livestream</name>
+    <title>Navigate to a Psychic's Livestream</title>
+    <test-cases>
+        <test-case start='1701804223033' status='passed' stop='1701804228061'>
+            <name>Validate for live stream psychic sign up first to Get Free Credits @signup-to-get-credits</name>
+            <title>Validate for live stream psychic sign up first to Get Free Credits @signup-to-get-credits</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@signup-to-get-credits'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701804223265' status='passed' stop='1701804224899'>
+                    <name>Given I navigate to Oranum application as a guest user ""</name>
+                    <title>Given I navigate to Oranum application as a guest user ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804223265' status='passed' stop='1701804224899'>
+                            <name>On homePage: verify home pagewithas guest user </name>
+                            <title>On homePage: verify home pagewithas guest user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804223265' status='passed' stop='1701804224890'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804224890' status='passed' stop='1701804224894'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804224895' status='passed' stop='1701804224899'>
+                                    <name>I see element "#page-nav-signup"</name>
+                                    <title>I see element "#page-nav-signup"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804224899' status='passed' stop='1701804225430'>
+                    <name>When I click on the psychic with live button ""</name>
+                    <title>When I click on the psychic with live button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804224899' status='passed' stop='1701804225430'>
+                            <name>On homePage: check live stream </name>
+                            <title>On homePage: check live stream </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804224899' status='passed' stop='1701804225429'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804225430' status='passed' stop='1701804227517'>
+                    <name>Then I should navigate to chat url with psychic as LIVE badge ""</name>
+                    <title>Then I should navigate to chat url with psychic as LIVE badge ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804225430' status='passed' stop='1701804227517'>
+                            <name>On homePage: navigate to expected url and check live status </name>
+                            <title>On homePage: navigate to expected url and check live status </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804225430' status='passed' stop='1701804226605'>
+                                    <name>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804226605' status='passed' stop='1701804226976'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804226977' status='passed' stop='1701804227512'>
+                                    <name>I see element "div[data-testid='badgeLive']"</name>
+                                    <title>I see element "div[data-testid='badgeLive']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804227517' status='passed' stop='1701804228061'>
+                    <name>When I click on Get Credits button ""</name>
+                    <title>When I click on Get Credits button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804227517' status='passed' stop='1701804228061'>
+                            <name>On homePage: click get credit btn </name>
+                            <title>On homePage: click get credit btn </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804227518' status='passed' stop='1701804228061'>
+                                    <name>I click "div[data-id='buyCreditIcon']"</name>
+                                    <title>I click "div[data-id='buyCreditIcon']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701804228109' status='passed' stop='1701804233154'>
+            <name>Validate for live stream psychic sign up first to add favorites @signup-to-add-favorites</name>
+            <title>Validate for live stream psychic sign up first to add favorites @signup-to-add-favorites</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@signup-to-add-favorites'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701804228401' status='passed' stop='1701804230063'>
+                    <name>Given I navigate to Oranum application as a guest user ""</name>
+                    <title>Given I navigate to Oranum application as a guest user ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804228401' status='passed' stop='1701804230063'>
+                            <name>On homePage: verify home pagewithas guest user </name>
+                            <title>On homePage: verify home pagewithas guest user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804228401' status='passed' stop='1701804230055'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804230055' status='passed' stop='1701804230059'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804230060' status='passed' stop='1701804230063'>
+                                    <name>I see element "#page-nav-signup"</name>
+                                    <title>I see element "#page-nav-signup"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804230063' status='passed' stop='1701804230480'>
+                    <name>When I click on the psychic with live button ""</name>
+                    <title>When I click on the psychic with live button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804230063' status='passed' stop='1701804230480'>
+                            <name>On homePage: check live stream </name>
+                            <title>On homePage: check live stream </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804230063' status='passed' stop='1701804230479'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804230480' status='passed' stop='1701804232633'>
+                    <name>Then I should navigate to chat url with psychic as LIVE badge ""</name>
+                    <title>Then I should navigate to chat url with psychic as LIVE badge ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804230480' status='passed' stop='1701804232633'>
+                            <name>On homePage: navigate to expected url and check live status </name>
+                            <title>On homePage: navigate to expected url and check live status </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804230480' status='passed' stop='1701804231665'>
+                                    <name>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804231665' status='passed' stop='1701804232047'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804232048' status='passed' stop='1701804232630'>
+                                    <name>I see element "div[data-testid='badgeLive']"</name>
+                                    <title>I see element "div[data-testid='badgeLive']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804232633' status='passed' stop='1701804233154'>
+                    <name>When I press add to favorites ""</name>
+                    <title>When I press add to favorites ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804232633' status='passed' stop='1701804233154'>
+                            <name>On homePage: add to fav </name>
+                            <title>On homePage: add to fav </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804232633' status='passed' stop='1701804233154'>
+                                    <name>I click "div[data-testid='favoriteIconLeft']"</name>
+                                    <title>I click "div[data-testid='favoriteIconLeft']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701804233179' status='passed' stop='1701804238024'>
+            <name>Validate for live stream psychic sign up first to get surprise button @signup-to-a-suprise-buttons</name>
+            <title>Validate for live stream psychic sign up first to get surprise button @signup-to-a-suprise-buttons</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@signup-to-a-suprise-buttons'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701804233461' status='passed' stop='1701804235096'>
+                    <name>Given I navigate to Oranum application as a guest user ""</name>
+                    <title>Given I navigate to Oranum application as a guest user ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804233461' status='passed' stop='1701804235096'>
+                            <name>On homePage: verify home pagewithas guest user </name>
+                            <title>On homePage: verify home pagewithas guest user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804233461' status='passed' stop='1701804235088'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804235089' status='passed' stop='1701804235092'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804235093' status='passed' stop='1701804235096'>
+                                    <name>I see element "#page-nav-signup"</name>
+                                    <title>I see element "#page-nav-signup"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804235096' status='passed' stop='1701804235502'>
+                    <name>When I click on the psychic with live button ""</name>
+                    <title>When I click on the psychic with live button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804235096' status='passed' stop='1701804235502'>
+                            <name>On homePage: check live stream </name>
+                            <title>On homePage: check live stream </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804235096' status='passed' stop='1701804235501'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804235502' status='passed' stop='1701804237636'>
+                    <name>Then I should navigate to chat url with psychic as LIVE badge ""</name>
+                    <title>Then I should navigate to chat url with psychic as LIVE badge ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804235502' status='passed' stop='1701804237636'>
+                            <name>On homePage: navigate to expected url and check live status </name>
+                            <title>On homePage: navigate to expected url and check live status </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804235502' status='passed' stop='1701804236663'>
+                                    <name>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804236663' status='passed' stop='1701804237042'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804237042' status='passed' stop='1701804237635'>
+                                    <name>I see element "div[data-testid='badgeLive']"</name>
+                                    <title>I see element "div[data-testid='badgeLive']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804237636' status='passed' stop='1701804238024'>
+                    <name>Then I clicks to get a surprise buttons and show signup modals ""</name>
+                    <title>Then I clicks to get a surprise buttons and show signup modals ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804237636' status='passed' stop='1701804238024'>
+                            <name>On homePage: click and check surprise elements </name>
+                            <title>On homePage: click and check surprise elements </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804237636' status='passed' stop='1701804237639'>
+                                    <name>I grab number of visible elements "[data-testid='surpriseListBottom']"</name>
+                                    <title>I grab number of visible elements "[data-testid='surpriseListBottom']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804237639' status='passed' stop='1701804237831'>
+                                    <name>I click "[data-testid='surpriseListBottom']:nth-of-type(1)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']:nth-of-type(1)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804237831' status='passed' stop='1701804237834'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804237834' status='passed' stop='1701804237836'>
+                                    <name>I grab number of visible elements "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I grab number of visible elements "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804237836' status='passed' stop='1701804238024'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1701804238056' status='passed' stop='1701804242561'>
+            <name>Validate for live stream psychic sign up first to get start session @signup-to-get-Start-session</name>
+            <title>Validate for live stream psychic sign up first to get start session @signup-to-get-Start-session</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@signup-to-get-Start-session'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701804238138' status='passed' stop='1701804239966'>
+                    <name>Given I navigate to Oranum application as a guest user ""</name>
+                    <title>Given I navigate to Oranum application as a guest user ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804238138' status='passed' stop='1701804239966'>
+                            <name>On homePage: verify home pagewithas guest user </name>
+                            <title>On homePage: verify home pagewithas guest user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804238138' status='passed' stop='1701804239937'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804239938' status='passed' stop='1701804239957'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804239958' status='passed' stop='1701804239966'>
+                                    <name>I see element "#page-nav-signup"</name>
+                                    <title>I see element "#page-nav-signup"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804239966' status='passed' stop='1701804240425'>
+                    <name>When I click on the psychic with live button ""</name>
+                    <title>When I click on the psychic with live button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804239966' status='passed' stop='1701804240425'>
+                            <name>On homePage: check live stream </name>
+                            <title>On homePage: check live stream </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804239966' status='passed' stop='1701804240424'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804240425' status='passed' stop='1701804242131'>
+                    <name>Then I should navigate to chat url with psychic as LIVE badge ""</name>
+                    <title>Then I should navigate to chat url with psychic as LIVE badge ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804240425' status='passed' stop='1701804242131'>
+                            <name>On homePage: navigate to expected url and check live status </name>
+                            <title>On homePage: navigate to expected url and check live status </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804240425' status='passed' stop='1701804241120'>
+                                    <name>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804241120' status='passed' stop='1701804241579'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701804241579' status='passed' stop='1701804242128'>
+                                    <name>I see element "div[data-testid='badgeLive']"</name>
+                                    <title>I see element "div[data-testid='badgeLive']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701804242131' status='passed' stop='1701804242561'>
+                    <name>When I press to start private session ""</name>
+                    <title>When I press to start private session ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701804242131' status='passed' stop='1701804242561'>
+                            <name>On homePage: get started session btn </name>
+                            <title>On homePage: get started session btn </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701804242131' status='passed' stop='1701804242560'>
+                                    <name>I force click "div[data-arma-state='private']"</name>
+                                    <title>I force click "div[data-arma-state='private']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

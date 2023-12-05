@@ -29,7 +29,8 @@ exports.config = {
   plugins: {
     allure: {
       enabled: true,
-      outputDir: "./output"
+      require: '@codeceptjs/allure-legacy',
+      outputDir: "./output/allure-results",
     },
     screenshotOnFail: {
       enabled: true
