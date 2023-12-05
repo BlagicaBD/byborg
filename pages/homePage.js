@@ -64,7 +64,6 @@ module.exports = {
     const elements = await I.grabTextFromAll(
       this.webElements.performerNameElements
     );
-    console.log(elements, "-----------------");
     const count = elements.length;
     for (const text of elements) {
       I.assertContains(text.toLowerCase(), name);
@@ -139,7 +138,6 @@ module.exports = {
     const categorylist = await I.grabTextFromAll(
       this.webElements.performerCategoryList
     );
-    console.log("---------------result", categorylist);
     categorylist.forEach((element) => {
       I.assertContain(element, this.selectedCategory);
       //unique contegory
