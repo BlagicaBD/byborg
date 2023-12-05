@@ -1,0 +1,1149 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1701815392468' stop='1701815396634'>
+    <name>Select a Category @psychics-by-category</name>
+    <title>Select a Category @psychics-by-category</title>
+    <test-cases>
+        <test-case start='1701815392847' status='passed' stop='1701815396620'>
+            <name>Select a category with its matching psychics {"category":"Energy work"} @category-results</name>
+            <title>Select a category with its matching psychics {"category":"Energy work"} @category-results</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@psychics-by-category'/>
+                <label name='tag' value='@category-results'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1701815393050' status='passed' stop='1701815395506'>
+                    <name>Given I navigate to Oranum web application home page ""</name>
+                    <title>Given I navigate to Oranum web application home page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701815393050' status='passed' stop='1701815395506'>
+                            <name>On homePage: verify home page </name>
+                            <title>On homePage: verify home page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701815393050' status='passed' stop='1701815395471'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815395471' status='passed' stop='1701815395497'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815395501' status='passed' stop='1701815395506'>
+                                    <name>I see element "ul[class*=sidebar-menu]"</name>
+                                    <title>I see element "ul[class*=sidebar-menu]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701815395506' status='passed' stop='1701815396136'>
+                    <name>When I choose a "Energy work" ""</name>
+                    <title>When I choose a "Energy work" ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701815395506' status='passed' stop='1701815396136'>
+                            <name>On homePage: choose category "Energy work"</name>
+                            <title>On homePage: choose category "Energy work"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701815395506' status='passed' stop='1701815396134'>
+                                    <name>I click "Energy work", ".sidebar-filters"</name>
+                                    <title>I click "Energy work", ".sidebar-filters"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1701815396136' status='passed' stop='1701815396620'>
+                    <name>Then the profile match the current category ""</name>
+                    <title>Then the profile match the current category ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1701815396137' status='passed' stop='1701815396620'>
+                            <name>On homePage: validate category filter </name>
+                            <title>On homePage: validate category filter </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1701815396137' status='passed' stop='1701815396612'>
+                                    <name>I grab text from all "article[data-type='performer'] .thumb-data-willingness-list"</name>
+                                    <title>I grab text from all "article[data-type='performer'] .thumb-data-willingness-list"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396613' status='passed' stop='1701815396614'>
+                                    <name>I assert contain "Dreams
+                                    Energy work
+                                    Money
+                                    Love
+                                    Healing
+                                    Clairvoyance", "Energy work"</name>
+                                    <title>I assert contain "Dreams
+                                    Energy work
+                                    Money
+                                    Love
+                                    Healing
+                                    Clairvoyance", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert contain "Dreams
+                                    Tarot
+                                    Career
+                                    Love
+                                    Energy work
+                                    Astrology", "Energy work"</name>
+                                    <title>I assert contain "Dreams
+                                    Tarot
+                                    Career
+                                    Love
+                                    Energy work
+                                    Astrology", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert contain "Career
+                                    Money
+                                    Love
+                                    Healing
+                                    Clairvoyance
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Career
+                                    Money
+                                    Love
+                                    Healing
+                                    Clairvoyance
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert contain "Clairvoyance
+                                    Energy work
+                                    Healing
+                                    Career
+                                    Family
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Energy work
+                                    Healing
+                                    Career
+                                    Family
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396614'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396614' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Love
+                                    Tarot
+                                    Energy work
+                                    Career
+                                    Money
+                                    Clairvoyance", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Tarot
+                                    Energy work
+                                    Career
+                                    Money
+                                    Clairvoyance", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Mediumship
+                                    Career
+                                    Family
+                                    Clairvoyance
+                                    Love
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Mediumship
+                                    Career
+                                    Family
+                                    Clairvoyance
+                                    Love
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Dreams
+                                    Mediumship
+                                    Career
+                                    Love
+                                    Clairvoyance
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Dreams
+                                    Mediumship
+                                    Career
+                                    Love
+                                    Clairvoyance
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Love
+                                    Mediumship
+                                    Family
+                                    Career
+                                    Energy work
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Mediumship
+                                    Family
+                                    Career
+                                    Energy work
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Clairvoyance
+                                    Energy work
+                                    Family
+                                    Love
+                                    Money
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Energy work
+                                    Family
+                                    Love
+                                    Money
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert contain "Money
+                                    Tarot
+                                    Career
+                                    Love
+                                    Astrology
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Money
+                                    Tarot
+                                    Career
+                                    Love
+                                    Astrology
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396615'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396615' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Tarot
+                                    Energy work
+                                    Astrology
+                                    Career
+                                    Money
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Tarot
+                                    Energy work
+                                    Astrology
+                                    Career
+                                    Money
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Healing
+                                    Energy work
+                                    Career
+                                    Love
+                                    Family
+                                    Clairvoyance", "Energy work"</name>
+                                    <title>I assert contain "Healing
+                                    Energy work
+                                    Career
+                                    Love
+                                    Family
+                                    Clairvoyance", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Love
+                                    Clairvoyance
+                                    Family
+                                    Energy work
+                                    Dreams
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Clairvoyance
+                                    Family
+                                    Energy work
+                                    Dreams
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Healing
+                                    Energy work
+                                    Career
+                                    Love
+                                    Clairvoyance
+                                    Money", "Energy work"</name>
+                                    <title>I assert contain "Healing
+                                    Energy work
+                                    Career
+                                    Love
+                                    Clairvoyance
+                                    Money", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Love
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Energy work
+                                    Mediumship", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Energy work
+                                    Mediumship", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Love
+                                    Energy work
+                                    Clairvoyance
+                                    Career
+                                    Money
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Energy work
+                                    Clairvoyance
+                                    Career
+                                    Money
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Clairvoyance
+                                    Career
+                                    Family
+                                    Tarot
+                                    Energy work
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Career
+                                    Family
+                                    Tarot
+                                    Energy work
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert contain "Astrology
+                                    Dreams
+                                    Love
+                                    Energy work
+                                    Career
+                                    Clairvoyance", "Energy work"</name>
+                                    <title>I assert contain "Astrology
+                                    Dreams
+                                    Love
+                                    Energy work
+                                    Career
+                                    Clairvoyance", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396616'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396616' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Family
+                                    Tarot
+                                    Career
+                                    Clairvoyance
+                                    Energy work
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Family
+                                    Tarot
+                                    Career
+                                    Clairvoyance
+                                    Energy work
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Career
+                                    Healing
+                                    Tarot
+                                    Love
+                                    Energy work
+                                    Family", "Energy work"</name>
+                                    <title>I assert contain "Career
+                                    Healing
+                                    Tarot
+                                    Love
+                                    Energy work
+                                    Family", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Love
+                                    Career
+                                    Clairvoyance
+                                    Dreams
+                                    Energy work
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Career
+                                    Clairvoyance
+                                    Dreams
+                                    Energy work
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Love
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Mediumship
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Mediumship
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Love
+                                    Healing
+                                    Career
+                                    Family
+                                    Clairvoyance
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Healing
+                                    Career
+                                    Family
+                                    Clairvoyance
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Clairvoyance
+                                    Healing
+                                    Money
+                                    Love
+                                    Energy work
+                                    Career", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Healing
+                                    Money
+                                    Love
+                                    Energy work
+                                    Career", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Love
+                                    Tarot
+                                    Career
+                                    Energy work
+                                    Dream interpretation
+                                    Dreams", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Tarot
+                                    Career
+                                    Energy work
+                                    Dream interpretation
+                                    Dreams", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Money
+                                    Love
+                                    Energy work
+                                    Career
+                                    Tarot
+                                    Crystal ball", "Energy work"</name>
+                                    <title>I assert contain "Money
+                                    Love
+                                    Energy work
+                                    Career
+                                    Tarot
+                                    Crystal ball", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Money
+                                    Clairvoyance
+                                    Healing
+                                    Family
+                                    Love
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Money
+                                    Clairvoyance
+                                    Healing
+                                    Family
+                                    Love
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert contain "Career
+                                    Money
+                                    Numerology
+                                    Love
+                                    Energy work
+                                    Clairvoyance", "Energy work"</name>
+                                    <title>I assert contain "Career
+                                    Money
+                                    Numerology
+                                    Love
+                                    Energy work
+                                    Clairvoyance", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396617' status='passed' stop='1701815396617'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Clairvoyance
+                                    Mediumship
+                                    Love
+                                    Family
+                                    Dreams
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Mediumship
+                                    Love
+                                    Family
+                                    Dreams
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Clairvoyance
+                                    Family
+                                    Energy work
+                                    Dreams
+                                    Mediumship
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Family
+                                    Energy work
+                                    Dreams
+                                    Mediumship
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Clairvoyance
+                                    Career
+                                    Family
+                                    Astrology
+                                    Love
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Career
+                                    Family
+                                    Astrology
+                                    Love
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Tarot
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Love
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Tarot
+                                    Career
+                                    Money
+                                    Clairvoyance
+                                    Love
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Dream interpretation
+                                    Love
+                                    Money
+                                    Runes
+                                    Career
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Dream interpretation
+                                    Love
+                                    Money
+                                    Runes
+                                    Career
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Dream interpretation
+                                    Money
+                                    Energy work
+                                    Tarot
+                                    Career
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Dream interpretation
+                                    Money
+                                    Energy work
+                                    Tarot
+                                    Career
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Dream interpretation
+                                    Family
+                                    Energy work
+                                    Mediumship
+                                    Love
+                                    Career", "Energy work"</name>
+                                    <title>I assert contain "Dream interpretation
+                                    Family
+                                    Energy work
+                                    Mediumship
+                                    Love
+                                    Career", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Family
+                                    Love
+                                    Clairvoyance
+                                    Healing
+                                    Career
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Family
+                                    Love
+                                    Clairvoyance
+                                    Healing
+                                    Career
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Family
+                                    Energy work
+                                    Healing
+                                    Clairvoyance
+                                    Love
+                                    Career", "Energy work"</name>
+                                    <title>I assert contain "Family
+                                    Energy work
+                                    Healing
+                                    Clairvoyance
+                                    Love
+                                    Career", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Money
+                                    Clairvoyance
+                                    Love
+                                    Career
+                                    Energy work
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Money
+                                    Clairvoyance
+                                    Love
+                                    Career
+                                    Energy work
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396618' status='passed' stop='1701815396618'>
+                                    <name>I assert contain "Energy work
+                                    Tarot
+                                    Love
+                                    Family
+                                    Career
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Energy work
+                                    Tarot
+                                    Love
+                                    Family
+                                    Career
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Palm reading
+                                    Love
+                                    Career
+                                    Energy work
+                                    Family
+                                    Healing", "Energy work"</name>
+                                    <title>I assert contain "Palm reading
+                                    Love
+                                    Career
+                                    Energy work
+                                    Family
+                                    Healing", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Love
+                                    Clairvoyance
+                                    Money
+                                    Tarot
+                                    Career
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Clairvoyance
+                                    Money
+                                    Tarot
+                                    Career
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Family
+                                    Love
+                                    Career
+                                    Tarot
+                                    Healing
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Family
+                                    Love
+                                    Career
+                                    Tarot
+                                    Healing
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Clairvoyance
+                                    Love
+                                    Career
+                                    Tarot
+                                    Money
+                                    Energy work", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Love
+                                    Career
+                                    Tarot
+                                    Money
+                                    Energy work", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Energy work
+                                    Family
+                                    Love
+                                    Astrology
+                                    Dream interpretation
+                                    Career", "Energy work"</name>
+                                    <title>I assert contain "Energy work
+                                    Family
+                                    Love
+                                    Astrology
+                                    Dream interpretation
+                                    Career", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Love
+                                    Clairvoyance
+                                    Energy work
+                                    Family
+                                    Dreams
+                                    Tarot", "Energy work"</name>
+                                    <title>I assert contain "Love
+                                    Clairvoyance
+                                    Energy work
+                                    Family
+                                    Dreams
+                                    Tarot", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Money
+                                    Love
+                                    Energy work
+                                    Clairvoyance
+                                    Career
+                                    Tarot", "Energy work"</name>
+                                    <title>I assert contain "Money
+                                    Love
+                                    Energy work
+                                    Clairvoyance
+                                    Career
+                                    Tarot", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert contain "Tarot
+                                    Career
+                                    Clairvoyance
+                                    Love
+                                    Energy work
+                                    Money", "Energy work"</name>
+                                    <title>I assert contain "Tarot
+                                    Career
+                                    Clairvoyance
+                                    Love
+                                    Energy work
+                                    Money", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396619'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396619' status='passed' stop='1701815396620'>
+                                    <name>I assert contain "Clairvoyance
+                                    Family
+                                    Career
+                                    Tarot
+                                    Energy work
+                                    Love", "Energy work"</name>
+                                    <title>I assert contain "Clairvoyance
+                                    Family
+                                    Career
+                                    Tarot
+                                    Energy work
+                                    Love", "Energy work"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1701815396620' status='passed' stop='1701815396620'>
+                                    <name>I assert equal 6, 6</name>
+                                    <title>I assert equal 6, 6</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -4,7 +4,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: "https://www.oranum.com/en",
-      show: false,
+      show: true,
       waitForNavigation: "load",
       restart: false,
       windowSize: "1920x1080",
