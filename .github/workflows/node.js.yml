@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Install Playwright dependencies
-      run: PLAYWRIGHT_BROWSERS_PATH=/nonexistent npx playwright install
+      run: npm install codeceptjs playwright --save-dev
     - name: Run Codecept tests
       run: npm run codeceptjs
     - name: Generate report
