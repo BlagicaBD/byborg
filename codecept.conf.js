@@ -26,11 +26,6 @@ exports.config = {
     features: "./features/*.feature",
     steps: "./step_definitions/*.js",
   },
-  // hooks: {
-  //   before: async function (test) {
-  //     await I.resizeWindow({ width: 1920, height: 1080 });
-  //   },
-  // },
   plugins: {
     allure: {
       enabled: true,
