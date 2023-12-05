@@ -1,28 +1,51 @@
+name: "tests"
 on:
+  pull_request:
   push:
-    branches: [ "master" ]
+    branches:
+      - main
+      - 'releases/*'
+  workflow_dispatch:
+  schedule:
+    - cron: '40 0 * * *'
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  test-linux:
+    name: Playwright@${{ matrix.playwright}} ${{ matrix.os }} headless=${{ matrix.headless }}
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [16.x]
-        # Use the supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        os: [ubuntu-20.04, macos-latest, windows-latest]
+        playwright: [1.8.0, 1.12.0, 1.18.0, next, beta]
+        headless: [true, false]
+        include:
+          - os: ubuntu-22.04
+            playwright: next
 
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm run build --if-present
+        node-version: 18
+    - uses: ./
     - name: Install dependencies
-      run: npm install
-    - name: Install Playwright dependencies
-      run: npm install codeceptjs playwright --save-dev
-    - name: Run Codecept tests
-      run: codeceptjs:headless
+      run: cd sample && npm install playwright@${{ matrix.playwright }} && npx playwright install
+      # Headless running is the same across OSes
+    - name: Run Playwright (headless)
+      if: ${{ matrix.headless == true }}
+      run: cd sample && node index.js
+
+      # Headful is different in every OS
+    - name: Run Playwright (headful linux)
+      if: ${{ matrix.headless == false && startsWith(matrix.os, 'ubuntu') }}
+      run: cd sample && HEADFUL=true xvfb-run --auto-servernum -- node index.js
+    - name: Run Playwright (headful windows)
+      if: ${{ matrix.headless == false && startsWith(matrix.os, 'windows') }}
+      run: cd sample && HEADFUL=true node index.js
+      shell: bash
+    - name: Run Playwright (headful mac)
+      if: ${{ matrix.headless == false && startsWith(matrix.os, 'mac') }}
+      run: cd sample && HEADFUL=true node index.js
+    - name: Run Codeceptjs test
+      run: npm run codeceptjs
