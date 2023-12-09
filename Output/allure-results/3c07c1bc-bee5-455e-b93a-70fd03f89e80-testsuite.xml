@@ -1,0 +1,484 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1702130484779' stop='1702130514225'>
+    <name>Navigate to a Psychic's Livestream</name>
+    <title>Navigate to a Psychic's Livestream</title>
+    <test-cases>
+        <test-case start='1702130487588' status='passed' stop='1702130514142'>
+            <name>Validate for live stream psychic sign up first to get surprise button @signup-to-a-suprise-buttons</name>
+            <title>Validate for live stream psychic sign up first to get surprise button @signup-to-a-suprise-buttons</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@signup-to-a-suprise-buttons'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1702130488164' status='passed' stop='1702130491197'>
+                    <name>Given I navigate to Oranum application as a guest user ""</name>
+                    <title>Given I navigate to Oranum application as a guest user ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1702130488164' status='passed' stop='1702130491197'>
+                            <name>On homePage: verify home pagewithas guest user </name>
+                            <title>On homePage: verify home pagewithas guest user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1702130488164' status='passed' stop='1702130491184'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130491184' status='passed' stop='1702130491190'>
+                                    <name>I grab text from "#home"</name>
+                                    <title>I grab text from "#home"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130491192' status='passed' stop='1702130491197'>
+                                    <name>I see element "#page-nav-signup"</name>
+                                    <title>I see element "#page-nav-signup"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1702130491197' status='passed' stop='1702130491639'>
+                    <name>When I click on the psychic with live button ""</name>
+                    <title>When I click on the psychic with live button ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1702130491197' status='passed' stop='1702130491639'>
+                            <name>On homePage: check live stream </name>
+                            <title>On homePage: check live stream </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1702130491197' status='passed' stop='1702130491635'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1702130491639' status='passed' stop='1702130493886'>
+                    <name>Then I should navigate to chat url with psychic as LIVE badge ""</name>
+                    <title>Then I should navigate to chat url with psychic as LIVE badge ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1702130491639' status='passed' stop='1702130493886'>
+                            <name>On homePage: navigate to expected url and check live status </name>
+                            <title>On homePage: navigate to expected url and check live status </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1702130491639' status='passed' stop='1702130492894'>
+                                    <name>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I see element ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130492894' status='passed' stop='1702130493279'>
+                                    <name>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</name>
+                                    <title>I click ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130493279' status='passed' stop='1702130493883'>
+                                    <name>I see element "div[data-testid='badgeLive']"</name>
+                                    <title>I see element "div[data-testid='badgeLive']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1702130493886' status='passed' stop='1702130514142'>
+                    <name>Then I clicks to get a surprise buttons and show signup modals ""</name>
+                    <title>Then I clicks to get a surprise buttons and show signup modals ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1702130493886' status='passed' stop='1702130514142'>
+                            <name>On homePage: click and check surprise elements </name>
+                            <title>On homePage: click and check surprise elements </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1702130493886' status='passed' stop='1702130493904'>
+                                    <name>I grab number of visible elements "[data-testid='surpriseListBottom']>.mc_surprise_item"</name>
+                                    <title>I grab number of visible elements "[data-testid='surpriseListBottom']>.mc_surprise_item"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130493904' status='passed' stop='1702130494100'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(1)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(1)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130494100' status='passed' stop='1702130494103'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130494103' status='passed' stop='1702130494253'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130494253' status='passed' stop='1702130495254'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130495255' status='passed' stop='1702130495414'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(2)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(2)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130495415' status='passed' stop='1702130495419'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130495419' status='passed' stop='1702130495579'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130495580' status='passed' stop='1702130496580'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130496581' status='passed' stop='1702130496752'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(3)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(3)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130496752' status='passed' stop='1702130496758'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130496758' status='passed' stop='1702130496916'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130496916' status='passed' stop='1702130497916'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130497917' status='passed' stop='1702130498386'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(4)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(4)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130498386' status='passed' stop='1702130498390'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130498390' status='passed' stop='1702130498540'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130498540' status='passed' stop='1702130499540'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130499540' status='passed' stop='1702130499696'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(5)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(5)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130499697' status='passed' stop='1702130499700'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130499701' status='passed' stop='1702130499837'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130499837' status='passed' stop='1702130500839'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130500839' status='passed' stop='1702130501007'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(6)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(6)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130501008' status='passed' stop='1702130501014'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130501014' status='passed' stop='1702130501172'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130501172' status='passed' stop='1702130502174'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130502174' status='passed' stop='1702130502330'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(7)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(7)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130502330' status='passed' stop='1702130502335'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130502335' status='passed' stop='1702130502496'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130502496' status='passed' stop='1702130503497'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130503498' status='passed' stop='1702130503664'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(8)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(8)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130503665' status='passed' stop='1702130503669'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130503669' status='passed' stop='1702130503831'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130503831' status='passed' stop='1702130504833'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130504833' status='passed' stop='1702130504997'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(9)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(9)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130504997' status='passed' stop='1702130505002'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130505002' status='passed' stop='1702130505163'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130505163' status='passed' stop='1702130506165'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130506165' status='passed' stop='1702130506334'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(10)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(10)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130506334' status='passed' stop='1702130506339'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130506339' status='passed' stop='1702130506492'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130506492' status='passed' stop='1702130507494'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130507494' status='passed' stop='1702130507651'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(11)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(11)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130507651' status='passed' stop='1702130507656'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130507656' status='passed' stop='1702130507811'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130507811' status='passed' stop='1702130508812'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130508812' status='passed' stop='1702130508983'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(12)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(12)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130508983' status='passed' stop='1702130508988'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130508988' status='passed' stop='1702130509149'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130509149' status='passed' stop='1702130510151'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130510151' status='passed' stop='1702130510317'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(13)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(13)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130510317' status='passed' stop='1702130510322'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130510322' status='passed' stop='1702130510480'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130510480' status='passed' stop='1702130511480'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130511481' status='passed' stop='1702130511652'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(14)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(14)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130511653' status='passed' stop='1702130511659'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130511659' status='passed' stop='1702130511812'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130511812' status='passed' stop='1702130512813'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130512813' status='passed' stop='1702130512980'>
+                                    <name>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(15)"</name>
+                                    <title>I click "[data-testid='surpriseListBottom']>.mc_surprise_item:nth-of-type(15)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130512980' status='passed' stop='1702130512986'>
+                                    <name>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</name>
+                                    <title>I see element "[data-testid='mainLoginSignUpOverlayApplet']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130512986' status='passed' stop='1702130513139'>
+                                    <name>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</name>
+                                    <title>I click ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1702130513139' status='passed' stop='1702130514141'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

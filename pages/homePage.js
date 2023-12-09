@@ -24,7 +24,7 @@ module.exports = {
     getSurpriceTwentyFiveCredit:
       "[data-testid='surpriseListBottom']>:nth-of-type(4)",
     getStartSessionBtn: "div[data-arma-state='private']",
-    surpriseListBottom: "[data-testid='surpriseListBottom']",
+    surpriseListBottom: "[data-testid='surpriseListBottom']>.mc_surprise_item",
     mainLoginSignUpOverlayApplet:
       "[data-testid='mainLoginSignUpOverlayApplet']",
     closeDialogButton:
@@ -115,18 +115,12 @@ module.exports = {
     for (let i = 1; i <= numberOfElements; i++) {
       const elementSelector = `${this.webElements.surpriseListBottom}:nth-of-type(${i})`;
       // Click on the nth element
-      I.click(elementSelector);
+      await I.click(elementSelector);
       // Check if mainLoginSignUpOverlayApplet is present
-      I.seeElement(this.webElements.mainLoginSignUpOverlayApplet);
-      // Perform actions if mainLoginSignUpOverlayApplet is present
-      if (
-        (await I.grabNumberOfVisibleElements(
-          this.webElements.mainLoginSignUpOverlayApplet
-        )) > 0
-      ) {
-        // Perform click to close the dialog
-        I.click(this.webElements.closeDialogButton);
-      }
+      await I.seeElement(this.webElements.mainLoginSignUpOverlayApplet);
+      // Perform click to close the dialog
+      await I.click(this.webElements.closeDialogButton);
+      await I.wait(1)
     }
   },
 
