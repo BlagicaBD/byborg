@@ -11,13 +11,10 @@ Then("only matching names are displayed in search dropdown", async () => {
   await homePage.matchName();
 });
 
-Then("user click on show all result with name", async() => {
-  await homePage.clickOnSearchResult();
-});
-
-Then("all result contains {string} in the search list displayed", (name) => {
-  homePage.countAndValidatePerformerNameElements(name);
-});
+Then("I view all results and validate they contain {string}", async (name) => {
+  await homePage.clickOnSearchResult(); 
+  await homePage.countAndValidatePerformerNameElements(name); 
+});  
 
 When("I choose a {string}", async(category) => {
 await homePage.chooseCategory(category);

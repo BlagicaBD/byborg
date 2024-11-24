@@ -1,72 +1,75 @@
 const { I } = inject();
 module.exports = {
   webElements: {
-    homepage: "#home",
+    //home page navigation bar and login elements
+    homePage: "#home",
     loginButton: "#page-nav-signup",
-    sliderbar: "ul[class*=sidebar-menu]",
+    sliderBar: "ul[class*=sidebar-menu]",
+    mainLoginSignUpOverlayApplet:"[data-testid='mainLoginSignUpOverlayApplet']",
+    closeDialogButton:".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog",
+    categorySideFilter: ".sidebar-filters",
+    
+
+    //search elements
     searchButton: "#search",
     searchPlaceholder: 'input[placeholder="Search for Expert or category"]',
-    newresult: "ul.toolbar-autosuggest>li",
-    showAllResult: "ul.toolbar-autosuggest>li:last-of-type",
-    performerNameElements:
-      "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div",
+    newResult: "ul.toolbar-autosuggest>li",
+    showAllResult: 'ul.toolbar-autosuggest>li:last-of-type',
+
+    //performers page elements
+    performerNameElements: "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div",
     userPageTitle: "h1.listpage-title",
-    checkLiveStatus:
-      ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
-    checkbedgeLive: "div[data-testid='badgeLive']",
+    checkLiveStatus:".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
+    checkBadgeLive: "div[data-testid='badgeLive']",
+    performerCategoryList:"article[data-type='performer'] .thumb-data-willingness-list",
+
+    //favorites elements
+    getJoinBtn: "button[data-testid='joinNowButtonApplet']",
     getCreditBtn: "div[data-id='buyCreditIcon']",
-    getJoinBth: "button[data-testid='joinNowButtonApplet']",
-    getAddToFavBth: "div[data-testid='favoriteIconLeft']",
-    getSurpriceIcon: "div[data-id='surpriseIcon']",
-    getSurpriceOneCredit: "[data-testid='surpriseListBottom']>:nth-of-type(1)",
-    getSurpricefiveCredit: "[data-testid='surpriseListBottom']>:nth-of-type(2)",
-    getSurpriceTenCredit: "[data-testid='surpriseListBottom']>:nth-of-type(3)",
-    getSurpriceTwentyFiveCredit:
-      "[data-testid='surpriseListBottom']>:nth-of-type(4)",
+    getAddToFavoriteBtn: "div[data-testid='favoriteIconLeft']",
+    getSurpriseIcon: "div[data-id='surpriseIcon']",
+    getSurpriseOneCredit: "[data-testid='surpriseListBottom']>:nth-of-type(1)",
+    getSurprisefiveCredit: "[data-testid='surpriseListBottom']>:nth-of-type(2)",
+    getSurpriseTenCredit: "[data-testid='surpriseListBottom']>:nth-of-type(3)",
+    getSurpriseTwentyFiveCredit:"[data-testid='surpriseListBottom']>:nth-of-type(4)",
     getStartSessionBtn: "div[data-arma-state='private']",
     surpriseListBottom: "[data-testid='surpriseListBottom']>.mc_surprise_item",
-    mainLoginSignUpOverlayApplet:
-      "[data-testid='mainLoginSignUpOverlayApplet']",
-    closeDialogButton:
-      ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog",
-    categorySideFilter: ".sidebar-filters",
-    performerCategoryList:
-      "article[data-type='performer'] .thumb-data-willingness-list",
+    
   },
 
   async verifyHomePage() {
     I.amOnPage("/");
-    await I.grabTextFrom(this.webElements.homepage);
-    I.seeElement(this.webElements.sliderbar);
+    await I.grabTextFrom(this.webElements.homePage);
+    I.seeElement(this.webElements.sliderBar);
   },
 
   typeInSearch(searchTerm) {
     this.searchTerm = searchTerm;
     I.seeElement(this.webElements.searchPlaceholder);
     I.fillField(this.webElements.searchPlaceholder, searchTerm);
-    I.wait(2);
+    I.waitForVisible(this.webElements.newResult);
   },
 
   async matchName() {
-    const ele = await I.grabTextFromAll(this.webElements.newresult);
+    const ele = await I.grabTextFromAll(this.webElements.newResult);
     const matcher = new RegExp(this.searchTerm, "i");
     ele.forEach((text) => {
       I.assertMatchRegex(text, matcher);
     });
   },
-
+   
   async clickOnSearchResult() {
     await I.click(this.webElements.showAllResult);
   },
 
   async countAndValidatePerformerNameElements(name) {
-    I.seeElement(this.webElements.userPageTitle, 5);
+    I.seeElement(this.webElements.userPageTitle);
     const elements = await I.grabTextFromAll(
       this.webElements.performerNameElements
     );
     const count = elements.length;
     for (const text of elements) {
-      I.assertContains(text.toLowerCase(), name);
+     await I.assertContains(text.toLowerCase(), name);
     }
     I.assertEquals(elements.length, count);
     return count;
@@ -75,59 +78,56 @@ module.exports = {
   async checkLiveStream() {
     await I.click(this.webElements.checkLiveStatus);
   },
-  async verifyHomePagewithasGuestUser() {
+
+  async verifyHomePageWithGuestUser() {
     I.amOnPage("/");
-    await I.grabTextFrom(this.webElements.homepage);
+    await I.grabTextFrom(this.webElements.homePage);
     I.seeElement(this.webElements.loginButton);
   },
 
   async navigateToExpectedUrlAndCheckLiveStatus() {
-    const elementCount = I.seeElement(this.webElements.checkLiveStatus);
+    I.seeElement(this.webElements.checkLiveStatus);
     await I.click(this.webElements.checkLiveStatus);
-    await I.seeElement(this.webElements.checkbedgeLive);
+    await I.seeElement(this.webElements.checkBadgeLive);
   },
-
+  
   async clickGetCreditBtn() {
     await I.click(this.webElements.getCreditBtn);
   },
 
-  async signInBtn() {
-    await I.waitForVisible, (this.webElements.getJoinBth, timeout._10s);
-    I.waitForText("JOIN NOW");
+  async verifyJoinButtonVisibility() {
+    await I.waitForVisible(this.webElements.getJoinBtn, timeout._10s);
+    I.assertTextEquals("JOIN NOW", this.webElements.getJoinBtn);
+  },
+  
+  async addToFavorite() {
+    await I.click(this.webElements.getAddToFavoriteBtn);
   },
 
-  async addToFav() {
-    await I.click(this.webElements.getAddToFavBth);
-  },
   async getStartedSessionBtn() {
     await I.forceClick(this.webElements.getStartSessionBtn);
   },
 
-  async getSurpriceModel() {
-    await I.click(this.webElements.getSurpriceIcon);
+  async getSurpriseModel() {
+    await I.click(this.webElements.getSurpriseIcon);
   },
 
   async clickAndCheckSurpriseElements() {
-    const numberOfElements = await I.grabNumberOfVisibleElements(
-      this.webElements.surpriseListBottom
-    );
-
+    const numberOfElements = await I.grabNumberOfVisibleElements(this.webElements.surpriseListBottom);
     for (let i = 1; i <= numberOfElements; i++) {
       const elementSelector = `${this.webElements.surpriseListBottom}:nth-of-type(${i})`;
-      // Click on the nth element
       await I.click(elementSelector);
-      // Check if mainLoginSignUpOverlayApplet is present
       await I.seeElement(this.webElements.mainLoginSignUpOverlayApplet);
-      // Perform click to close the dialog
       await I.click(this.webElements.closeDialogButton);
-      await I.wait(1)
+      await I.waitForInvisible(this.webElements.mainLoginSignUpOverlayApplet); 
     }
   },
-
+  
   async chooseCategory(category) {
     await I.click(category, this.webElements.categorySideFilter);
     this.selectedCategory = category;
   },
+
   async validateCategoryFilter() {
     const categorylist = await I.grabTextFromAll(
       this.webElements.performerCategoryList

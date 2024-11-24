@@ -1,40 +1,68 @@
-# CodeceptJS Framework with BBD
+]# Oranum Automation Framework
 
-RECOMMENDED SECTIONS TO READ AND FOLLOW:
-    - 1. Clone this project from [GitHub]
-    - 2. Install all dependency
-    - 3. Run the tests locally
+### Table of Contents
 
-## 1. Clone this project from [GitHub](https://github.com/masand24/Byborg.git)
+1. [Overview](#overview)
+2. [Setup Instructions](#setup-instructions)
+3. [Installation](#installation)
+    - [Clone the Repository](#clone-the-repository)
+    - [Install Dependencies](#install-dependencies)
+    - [Environment Prerequisites](#environment-prerequisites)
+4. [Running Tests](#running-tests)
+    - [Run Specific Scenario](#run-specific-scenario)
+    - [Run All Tests](#run-all-tests)
+5. [Viewing Reports](#viewing-reports)
+    - [Generate Allure Report](#generate-allure-report)
+    - [Open Allure Report](#open-allure-report)
+    - [Manually Open Report](#manually-open-report)
 
+---
 
-## 2. Install this project from the ground 
+### Overview
+This project automates Oranum application use cases using CodeceptJS and Playwright for browser automation. It follows the BDD approach for behavior-driven testing.
 
-# Install CodeceptJs - Dev dependencies (including Allure)
+---
+
+### Setup Instructions
+To set up this project locally, follow the steps below:
+
+---
+
+### Installation
+
+Clone the repository:
+```bash 
+git clone https://github.com/masand24/Byborg.git
+```
+Install dependencies:
+```bash
 npm install -g npm
 npm init -y
+npm install @codeceptjs/ui --save
+npm install codeceptjs-chai --save-dev
 npm install codeceptjs playwright --save-dev
 npm install -g allure-commandline --save-dev
-npm i @codeceptjs/ui --save
+```
+### Environment prerequisites:
+-Install Java Development Kit (JDK) - needed for Allure
+-Ensure Java is accessible from the command line by running java -version
+-Add Java to the system's PATH environment variable
 
-# Run a single scenario to check if everything works:
-npx codeceptjs run --features --grep '@getSearchTerm' --steps
+## Run the tests and view reports:
 
-
-# To Run all tests at once:
+### To run a specific scenario with specific tags:
+```bash 
+npx codeceptjs run --features --grep '@tagName' --steps
+```
+    
+### To run all tests at once:
+```bash
 npx codeceptjs run --steps
-
-# To check reports
+```
+	
+### Generate the Allure report:
+```bash
 npm run allure-report
-
-# To run without headless browser below config need to be changed, currently its running in chromium browser, to run in headless we need to change config setting to show as false, inside helpers
-
-  helpers: {
-    Playwright: {
-      browser: "chromium",
-      url: "https://www.oranum.com/en",
-# show: false,
-      waitForNavigation: "load",
-      restart: false,
-      windowSize: "1920x1080",
-    },
+```
+### Manually open the report:
+report can be opened manually from allure-report directory with the index.html in a browser
