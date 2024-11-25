@@ -1,32 +1,28 @@
 const { I, homePage, And } = inject();
 Given("I navigate to Oranum application as a guest user", async () => {
-  await homePage.verifyHomePageWithGuestUser();
+  await homePage.verifyHomePage();
 });
 
 When("I click on the psychic with live button", async () => {
-  await homePage.checkLiveStream();
+  await homePage.handleLiveStream();
 });
 
-Then("I should navigate to chat url with psychic as LIVE badge", async () => {
-  await homePage.navigateToExpectedUrlAndCheckLiveStatus();
-});
-
-When("I click on Get Credits button",async ()=>{
-  homePage.clickGetCreditBtn()
-});
-
-Then("a sign up modal is showed", async ()=>{
+Then("a sign up modal is showed", async () => {
   homePage.verifyJoinButtonVisibility();
 });
 
-When("I press add to favorites",async ()=>{
-  homePage.addToFavorite()
+When("I click on Get Credits button", async () => {
+  homePage.clickGetCreditBtn()
 });
 
-Then("I clicks to get a surprise buttons and show signup modals", async ()=>{
-await homePage.clickAndCheckSurpriseElements();
+When("I press add to favorites", async () => {
+  homePage.clickAndAddToFavorite()
 });
 
-When("I press to start private session", async()=>{
-  homePage.getStartedSessionBtn();
+Then("I clicks to get a surprise buttons and show signup modals", async () => {
+  await homePage.handleSurpriseElements();
+});
+
+When("I press to start private session", async () => {
+  homePage.startPrivateSession();
 });

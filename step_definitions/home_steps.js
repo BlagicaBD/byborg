@@ -4,22 +4,22 @@ Given("I navigate to Oranum web application home page", async () => {
 });
 
 When("I type {string} in the search", (searchTerm) => {
-  homePage.typeInSearch(searchTerm);
+  homePage.performSearch(searchTerm);
 });
 
 Then("only matching names are displayed in search dropdown", async () => {
-  await homePage.matchName();
+  await homePage.verifySearchResults();
 });
 
 Then("I view all results and validate they contain {string}", async (name) => {
-  await homePage.clickOnSearchResult(); 
-  await homePage.countAndValidatePerformerNameElements(name); 
-});  
+  await homePage.clickOnShowAllSearchResults();
+  await homePage.validatePerformerNames(name);
+});
 
-When("I choose a {string}", async(category) => {
-await homePage.chooseCategory(category);
+When("I choose a {string}", async (category) => {
+  await homePage.selectCategory(category);
 });
-Then("the profile match the current category", async ()=>{
-await homePage.validateCategoryFilter();
+
+Then("the profile match the current category", async () => {
+  await homePage.validateCategoryFilter();
 });
- 

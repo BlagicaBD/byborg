@@ -1,4 +1,4 @@
-]# Oranum Automation Framework
+# Oranum Automation Framework
 
 ### Table of Contents
 
@@ -41,10 +41,12 @@ npm init -y
 npm install @codeceptjs/ui --save
 npm install codeceptjs-chai --save-dev
 npm install codeceptjs playwright --save-dev
-npm install -g allure-commandline --save-dev
+npm install -g allure-commandline 
+npx playwright install
 ```
 ### Environment prerequisites:
--Install Java Development Kit (JDK) - needed for Allure
+-Node.js version 18 or later is required
+-Java Development Kit (JDK) - needed for Allure
 -Ensure Java is accessible from the command line by running java -version
 -Add Java to the system's PATH environment variable
 

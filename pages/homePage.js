@@ -1,143 +1,170 @@
 const { I } = inject();
+const TIMEOUTS = {
+  SHORT: 2,
+  MEDIUM: 5,
+  LONG: 10,
+  EXPLICIT_WAIT: 1000
+};
 module.exports = {
   webElements: {
-    //home page navigation bar and login elements
+    // Navigation elements
     homePage: "#home",
     loginButton: "#page-nav-signup",
-    sliderBar: "ul[class*=sidebar-menu]",
-    mainLoginSignUpOverlayApplet:"[data-testid='mainLoginSignUpOverlayApplet']",
-    closeDialogButton:".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog",
-    categorySideFilter: ".sidebar-filters",
-    
+    sidebar: "ul[class*=sidebar-menu]",
 
-    //search elements
+    // Filters and overlays
+    mainLoginSignUpOverlayApplet: "[data-testid='mainLoginSignUpOverlayApplet']",
+    categorySideFilter: ".sidebar-filters",
+
+    // Search elements
     searchButton: "#search",
     searchPlaceholder: 'input[placeholder="Search for Expert or category"]',
-    newResult: "ul.toolbar-autosuggest>li",
-    showAllResult: 'ul.toolbar-autosuggest>li:last-of-type',
+    newSearchResult: "ul.toolbar-autosuggest>li",
+    showAllResults: 'ul.toolbar-autosuggest>li:last-of-type',
 
-    //performers page elements
+    // Performer elements
     performerNameElements: "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div",
-    userPageTitle: "h1.listpage-title",
-    checkLiveStatus:".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
-    checkBadgeLive: "div[data-testid='badgeLive']",
-    performerCategoryList:"article[data-type='performer'] .thumb-data-willingness-list",
+    checkLiveStatus: ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
+    performerCategoryList: "article[data-type='performer'] .thumb-data-willingness-list",
 
-    //favorites elements
-    getJoinBtn: "button[data-testid='joinNowButtonApplet']",
-    getCreditBtn: "div[data-id='buyCreditIcon']",
-    getAddToFavoriteBtn: "div[data-testid='favoriteIconLeft']",
-    getSurpriseIcon: "div[data-id='surpriseIcon']",
-    getSurpriseOneCredit: "[data-testid='surpriseListBottom']>:nth-of-type(1)",
-    getSurprisefiveCredit: "[data-testid='surpriseListBottom']>:nth-of-type(2)",
-    getSurpriseTenCredit: "[data-testid='surpriseListBottom']>:nth-of-type(3)",
-    getSurpriseTwentyFiveCredit:"[data-testid='surpriseListBottom']>:nth-of-type(4)",
-    getStartSessionBtn: "div[data-arma-state='private']",
+    // UI elements
+    pageTitle: "h1.listpage-title",
+    badgeLive: "div[data-testid='badgeLive']",
+
+    // Action buttons
+    joinButton: "button[data-testid='joinNowButtonApplet']",
+    getCreditButton: "div[data-id='buyCreditIcon']",
+    addToFavoriteButton: "div[data-testid='favoriteIconLeft']",
+    startSessionButton: "div[data-arma-state='private']",
+    closeDialogButton: ".mc_js_login_or_signup>div>.mc_dialog__close.js_close_dialog",
+
+    // Surprise elements
+    surpriseIcon: "div[data-id='surpriseIcon']",
+    surpriseOneCredit: "[data-testid='surpriseListBottom']>:nth-of-type(1)",
+    surpriseFiveCredit: "[data-testid='surpriseListBottom']>:nth-of-type(2)",
+    surpriseTenCredit: "[data-testid='surpriseListBottom']>:nth-of-type(3)",
+    surpriseTwentyFiveCredit: "[data-testid='surpriseListBottom']>:nth-of-type(4)",
     surpriseListBottom: "[data-testid='surpriseListBottom']>.mc_surprise_item",
-    
+
+  },
+  // Utility methods
+  async waitAndClick(selector, timeout = TIMEOUTS.MEDIUM) {
+    try {
+      await I.waitForElement(selector, timeout);
+      await I.click(selector);
+    } catch (error) {
+      console.error(`Failed to click element: ${selector}`, error);
+      throw new Error(`Click operation failed for: ${selector}`);
+    }
   },
 
-  async verifyHomePage() {
+  async assertElementPresent(selector, timeout = TIMEOUTS.MEDIUM) {
+    try {
+      await I.waitForElement(selector, timeout);
+      await I.seeElement(selector);
+    } catch (error) {
+      throw new Error(`Element not found: ${selector}`);
+    }
+  },
+
+  async verifyHomePage(isGuestUser = false) {
     I.amOnPage("/");
     await I.grabTextFrom(this.webElements.homePage);
-    I.seeElement(this.webElements.sliderBar);
+    await this.assertElementPresent(this.webElements.sidebar);
+
+    if (isGuestUser) {
+      await this.assertElementPresent(this.webElements.loginButton);
+    }
   },
 
-  typeInSearch(searchTerm) {
-    this.searchTerm = searchTerm;
-    I.seeElement(this.webElements.searchPlaceholder);
+
+  async performSearch(searchTerm) {
+    await this.assertElementPresent(this.webElements.searchPlaceholder);
     I.fillField(this.webElements.searchPlaceholder, searchTerm);
-    I.waitForVisible(this.webElements.newResult);
+    await I.wait(TIMEOUTS.SHORT);
+    this.searchTerm = searchTerm;
   },
 
-  async matchName() {
-    const ele = await I.grabTextFromAll(this.webElements.newResult);
+
+  async verifySearchResults() {
+    const results = await I.grabTextFromAll(this.webElements.newSearchResult);
     const matcher = new RegExp(this.searchTerm, "i");
-    ele.forEach((text) => {
+    results.forEach((text) => {
       I.assertMatchRegex(text, matcher);
     });
   },
-   
-  async clickOnSearchResult() {
-    await I.click(this.webElements.showAllResult);
+
+  async clickOnShowAllSearchResults() {
+    await this.waitAndClick(this.webElements.showAllResults);
   },
 
-  async countAndValidatePerformerNameElements(name) {
-    I.seeElement(this.webElements.userPageTitle);
-    const elements = await I.grabTextFromAll(
-      this.webElements.performerNameElements
-    );
+
+  async validatePerformerNames(name) {
+    await this.assertElementPresent(this.webElements.pageTitle);
+    const elements = await I.grabTextFromAll(this.webElements.performerNameElements);
     const count = elements.length;
     for (const text of elements) {
-     await I.assertContains(text.toLowerCase(), name);
+      I.assertContains(text.toLowerCase(), name);
     }
     I.assertEquals(elements.length, count);
     return count;
   },
 
-  async checkLiveStream() {
-    await I.click(this.webElements.checkLiveStatus);
+  // Live stream handling
+  async handleLiveStream() {
+    await this.waitAndClick(this.webElements.checkLiveStatus);
+    await this.assertElementPresent(this.webElements.badgeLive);
   },
 
-  async verifyHomePageWithGuestUser() {
-    I.amOnPage("/");
-    await I.grabTextFrom(this.webElements.homePage);
-    I.seeElement(this.webElements.loginButton);
-  },
-
-  async navigateToExpectedUrlAndCheckLiveStatus() {
-    I.seeElement(this.webElements.checkLiveStatus);
-    await I.click(this.webElements.checkLiveStatus);
-    await I.seeElement(this.webElements.checkBadgeLive);
-  },
-  
   async clickGetCreditBtn() {
-    await I.click(this.webElements.getCreditBtn);
+    await this.waitAndClick(this.webElements.getCreditButton);
   },
 
-  async verifyJoinButtonVisibility() {
-    await I.waitForVisible(this.webElements.getJoinBtn, timeout._10s);
-    I.assertTextEquals("JOIN NOW", this.webElements.getJoinBtn);
-  },
-  
-  async addToFavorite() {
-    await I.click(this.webElements.getAddToFavoriteBtn);
+  async clickOnJoinNowButton() {
+    await I.waitForVisible(this.webElements.joinButton, TIMEOUTS.LONG);
+    I.waitForText("JOIN NOW");
   },
 
-  async getStartedSessionBtn() {
-    await I.forceClick(this.webElements.getStartSessionBtn);
+
+  async clickAndAddToFavorite() {
+    await this.waitAndClick(this.webElements.buttons.addToFavorite);
   },
 
-  async getSurpriseModel() {
-    await I.click(this.webElements.getSurpriseIcon);
+  async startPrivateSession() {
+    await I.forceClick(this.webElements.startSessionButton);
   },
 
-  async clickAndCheckSurpriseElements() {
-    const numberOfElements = await I.grabNumberOfVisibleElements(this.webElements.surpriseListBottom);
-    for (let i = 1; i <= numberOfElements; i++) {
-      const elementSelector = `${this.webElements.surpriseListBottom}:nth-of-type(${i})`;
-      await I.click(elementSelector);
-      await I.seeElement(this.webElements.mainLoginSignUpOverlayApplet);
-      await I.click(this.webElements.closeDialogButton);
-      await I.waitForInvisible(this.webElements.mainLoginSignUpOverlayApplet); 
+  async handleSurpriseElements() {
+    const elements = await I.grabNumberOfVisibleElements(this.webElements.surpriseListBottom);
+
+    for (let i = 1; i <= elements; i++) {
+      const selector = `${this.webElements.surpriseListBottom}:nth-of-type(${i})`;
+      // click on the nth element
+      await this.waitAndClick(selector);
+      // check if mainLoginSignUpOverlayApplet is present
+      await this.assertElementPresent(this.webElements.mainLoginSignUpOverlayApplet);
+      // click on the close button on the dialog
+      await this.waitAndClick(this.webElements.closeDialogButton);
+      await I.wait(TIMEOUTS.SHORT);
     }
   },
-  
-  async chooseCategory(category) {
-    await I.click(category, this.webElements.categorySideFilter);
+
+  async selectCategory(category) {
+    await this.assertElementPresent(this.webElements.categorySideFilter);
+    await this.waitAndClick(category);
     this.selectedCategory = category;
   },
 
-  async validateCategoryFilter() {
-    const categorylist = await I.grabTextFromAll(
-      this.webElements.performerCategoryList
-    );
-    categorylist.forEach((element) => {
+  async validateSelectedCategory() {
+    const categories = await I.grabTextFromAll(this.webElements.performerCategoryList);
+    categories.forEach(element => {
       I.assertContain(element, this.selectedCategory);
-      //unique contegory
-      const cateList = element.split("\n");
-      const uniquecateList = new Set(cateList);
-      I.assertEqual(cateList.length, uniquecateList.size);
+      const categoryList = element.split("\n");
+      const uniqueCategories = new Set(categoryList);
+      I.assertEqual(categoryList.length, uniqueCategories.size);
     });
-  },
+  }
 };
+
+
+
