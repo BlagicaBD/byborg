@@ -19,10 +19,12 @@ When("I press add to favorites", async () => {
   homePage.clickAndAddToFavorite()
 });
 
-Then("I clicks to get a surprise buttons and show signup modals", async () => {
+When("I clicks to get a surprise buttons", async () => {
   await homePage.handleSurpriseElements();
 });
 
 When("I press to start private session", async () => {
   homePage.startPrivateSession();
 });
+
+
