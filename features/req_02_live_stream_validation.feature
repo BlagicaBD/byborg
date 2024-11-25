@@ -24,7 +24,7 @@ Feature: Navigate to a Psychic's Livestream
         Given I navigate to Oranum application as a guest user
         And I click on the psychic with live button
         #Then I should navigate to chat url with psychic as LIVE badge
-        When I clicks to get a surprise buttons
+        When I click to get a surprise buttons
         Then a sign up modal is showed
 
     @signup-to-get-Start-session
