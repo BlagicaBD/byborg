@@ -10,7 +10,7 @@ In the live_stream_steps file, I have removed the navigateToExpectedUrlAndCheckL
 The feature files have been updated to reflect these changes in the step definitions. Additionally, in the feature files, in some of the scenarios, ‘When’ has been replaced with ‘And’ in cases to improve the logical flow of the scenario. One redundant step has been removed from the feature file and from the steps. I have commented out the removed step in the feature file for representation purposes (for this task only)
 
 ### Benefits of the updates in the step_definitions and features files:
-•	The updated step names describe the action and validation together, making it easier to understand the purpose of each step, improving readeability 
-•	Instead of maintaining two separate steps, we now have a single concise step that reduces redundancy
-•	Using single definition making it easier to maintain and modify in the future, better modularity 
-•	Using 'And' for related actions improves the logical structure of the scenarios
+* The updated step names describe the action and validation together, making it easier to understand the purpose of each step, improving readeability 
+* Instead of maintaining two separate steps, we now have a single concise step that reduces redundancy
+* Using single definition making it easier to maintain and modify in the future, better modularity 
+* Using 'And' for related actions improves the logical structure of the scenarios

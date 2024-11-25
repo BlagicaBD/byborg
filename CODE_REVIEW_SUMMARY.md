@@ -5,7 +5,7 @@
 - Improve formatting for better readability and maintainability
 - Perform a spell check for all elements and methods (e.g., surprice should be corrected to surprise)
 
-## Web elements - line 3 to line 34
+## Web elements 
 - Group related elements logically to improve organization and readability
 - Ensure the naming of elements is consistent and descriptive ( Btn or Button uniformly for all button-related elements)
 - Avoid including action verbs (e.g., get, check) in the element names, the focus should be on describing the element itself
