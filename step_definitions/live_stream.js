@@ -19,7 +19,7 @@ When("I press add to favorites", async () => {
   homePage.clickAndAddToFavorite()
 });
 
-When("I clicks to get a surprise buttons", async () => {
+When("I click to get a surprise buttons", async () => {
   await homePage.handleSurpriseElements();
 });
 
