@@ -18,8 +18,7 @@ Feature: Psychics Searching Results
 	Scenario Outline: Clicking on show all result 'name' from dropdown should show list with same name.
 		Given I navigate to Oranum web application home page
 		When I type "<name>" in the search
-		Then user click on show all result with name
-		Then all result contains "<name>" in the search list displayed
+		Then I view all results and validate they contain "<name>"
 		Examples:
 			| name       |
 			| Ann        |
