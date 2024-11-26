@@ -16,8 +16,8 @@
 - Introduce a TIMEOUTS constant to standardize and manage wait times across the codebase
 - typeInSearch - rename typeInSearch to performSearch to better describe its functionality
 - matchName - rename it to verifySearchResults to describe the function. The const 'ele' should be renamed to 'result' to be more descriptive
- -clickOnSearchResult -rename it to clickOnShowAllSearchResults to accurately reflect its purpose of clicking on the "Show All Results" option
-- countAndValidatePerformerNameElements - rename the method to validatePerformerNames to make  more concise
+ -clickOnSearchResult - the method is failing in the tests, the locator is not found, replace it with another locator or press 'Enter'. Rename it to pressEnterToShowAllResults to accurately reflect its purpose of clicking on the "Show All Results" option.
+- countAndValidatePerformerNameElements - rename the method to validatePerformerNames for conciseness. Update the method to include correct assertions and implement cleaner, more efficient code.
 - navigateToExpectedUrlAndCheckLiveStatus - group the method with checkLiveStream into a single method named handleLiveStatus to consolidate functionality and improve maintainability
 - Remove the constant elementCount as it is never used
 - signInBtn - remove the unnecessary comma after I.waitForVisible, rename the method to clickOnJoinNowButton to be more descriptive

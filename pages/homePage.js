@@ -24,7 +24,7 @@ module.exports = {
 
     // Performer elements
     performerNameElements: "article[data-type=performer]>a>div:nth-of-type(2)>.thumb-data-item--name-container>div",
-    checkLiveStatus: ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
+    liveStatus: ".thumb--modern[data-status='1'] .status-text--live, .thumb--modern[data-status='2'] .status-text--live, .thumb--modern[data-status='3'] .status-text--live",
     performerCategoryList: "article[data-type='performer'] .thumb-data-willingness-list",
 
     // UI elements
@@ -80,7 +80,7 @@ module.exports = {
 
   async performSearch(searchTerm) {
     await this.assertElementPresent(this.webElements.searchPlaceholder);
-    I.fillField(this.webElements.searchPlaceholder, searchTerm);
+    await I.fillField(this.webElements.searchPlaceholder, searchTerm);
     await I.wait(TIMEOUTS.SHORT);
     this.searchTerm = searchTerm;
   },
@@ -94,27 +94,25 @@ module.exports = {
     });
   },
 
-  async clickOnShowAllSearchResults() {
-    await this.waitAndClick(this.webElements.showAllResults);
+  async pressEnterToShowAllResults() {
+    await I.pressKey('Enter');
   },
-
 
   async validatePerformerNames(name) {
     await this.assertElementPresent(this.webElements.pageTitle);
-    const elements = await I.grabTextFromAll(this.webElements.performerNameElements);
-    const count = elements.length;
-    for (const text of elements) {
-      I.assertContains(text.toLowerCase(), name);
+    const names = await I.grabTextFromAll(this.webElements.performerNameElements);
+    for (const text of names) {
+      I.assertEqual(text.toLowerCase().includes(name.toLowerCase()), true);
     }
-    I.assertEquals(elements.length, count);
-    return count;
+    return names.length;
   },
 
-  // Live stream handling
+  //Live stream handling
   async handleLiveStream() {
-    await this.waitAndClick(this.webElements.checkLiveStatus);
+    await this.waitAndClick(this.webElements.liveStatus);
     await this.assertElementPresent(this.webElements.badgeLive);
   },
+
 
   async clickGetCreditBtn() {
     await this.waitAndClick(this.webElements.getCreditButton);
