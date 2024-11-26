@@ -28,7 +28,7 @@ jobs:
     - name: run CodeceptJS tests
       uses: actions/setup-node@v3  
     - name: Run Codecept tests
-      run: npm run codeceptjs
+      run: npm run codeceptjs --legacy-peer-deps
     - name: Generate Allure Report
       run: npm run allure-report
       if: always()
