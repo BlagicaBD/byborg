@@ -1,6 +1,6 @@
 ### home_steps
 
-In the home_steps file, I have grouped the "clickOnShowAllSearchResults" and "validatePerformerNames" into a single reusable step. This improves readability, reduces redundancy, and makes the step name clearly describe the action and validation together.
+In the home_steps file, I have grouped the step for show all results and validation of the performer names into a single reusable step. This improves readability, reduces redundancy, and makes the step name clearly describe the action and validation together.
 
 ### live_stream
 
