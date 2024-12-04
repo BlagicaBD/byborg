@@ -38,17 +38,17 @@ Install dependencies:
 ```bash
 npm install -g npm
 npm init -y
-npm install @codeceptjs/ui --save
-npm install codeceptjs-chai --save-dev
+npm install @codeceptjs/ui --save --legacy-peer-deps
+npm install codeceptjs-chai --save-dev --legacy-peer-deps
 npm install codeceptjs playwright --save-dev
 npm install -g allure-commandline 
 npx playwright install
 ```
 ### Environment prerequisites:
--Node.js version 18 or later is required
--Java Development Kit (JDK) - needed for Allure
--Ensure Java is accessible from the command line by running java -version
--Add Java to the system's PATH environment variable
+* Node.js version 18 or later is required
+* Java Development Kit (JDK) - needed for Allure
+* Ensure Java is accessible from the command line by running java -version
+* Add Java to the system's PATH environment variable
 
 ## Run the tests and view reports:
 

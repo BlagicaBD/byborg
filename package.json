@@ -8,7 +8,9 @@
         "codeceptjs": "codeceptjs run --steps",
         "codeceptjs:headless": "codeceptjs run --steps --headed=false",
         "codeceptjs:ui": "codecept-ui --app",
-        "allure-report": "npx allure generate ./output/allure-results --clean -o allure-report && allure open allure-report"
+        "allure-report": "npx allure generate ./output/allure-results --clean -o allure-report",
+        "allure-report:open": "npm run allure-report && allure open allure-report"
+
     },
     "author": "Saurabh Masand",
     "license": "ISC",
@@ -18,10 +20,9 @@
         "@codeceptjs/examples": "^1.2.1",
         "@codeceptjs/ui": "^0.7.0",
         "allure-commandline": "^2.24.1",
-        "codeceptjs": "^3.6.7",
-        "playwright": "^1.49.0"
+        "codeceptjs": "^3.5.8",
+        "codeceptjs-chai": "^2.3.5",
+        "playwright": "^1.40.1"
     },
-    "dependencies": {
-        "codeceptjs-chai": "^2.3.5"
-    }
+    "keywords": []
 }
