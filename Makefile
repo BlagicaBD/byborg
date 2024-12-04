@@ -24,7 +24,7 @@ allure-report:
 
 # Show reports
 serve-report:
-	cd ./allure-report && python3 -m http.server 8000
+	cd ./allure-report && python -m http.server 8000
 
 # Show help message
 help:
