@@ -153,7 +153,7 @@ module.exports = {
     this.selectedCategory = category;
   },
 
-  async validateSelectedCategory() {
+  async validateSelectedCategories() {
     const categories = await I.grabTextFromAll(this.webElements.performerCategoryList);
     categories.forEach(element => {
       I.assertContain(element, this.selectedCategory);
